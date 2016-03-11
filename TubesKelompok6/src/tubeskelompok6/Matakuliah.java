@@ -11,53 +11,33 @@ package tubeskelompok6;
  */
 public class Matakuliah {
 
-private Matakuliah matakuliah;
-private Mahasiswa[] anggota;
-private Tugas[] tugas;
+private String nama;
+private int sks;
+private String kodeMk
 
-public void setMatakuliah(Matakuliah m) {
-	this.m = m;
+public void setNim(long nim) {
+	this.nim= nim;
 }
 
-public Matakuliah getMatakuliah() {
-	return matakuliah;
+public long getNim() {
+	return nim;
 }
 
-public setMahasiswa(Mahasiswa m) {
-	this.m = m;
+public int getNim() {
+	this.nim = nim;
 }
 
-public Mahasiswa getMahasiswa() {
-	return mahasiswa;
+public void setKodeMk(String k) {
+	this.k = k;
 }
 
-public void setTugas(Tugas t) {
-	this.t = t;
+public String getNim() {
+	return nim;
 }
 
-public Tugas getTugas() {
-	return tugas;
+public void setSks(int sks) {
+	this.sks=sks;
 }
 
-public addMahasiswa(Mahasiswa m) {
-	
-}
 
-public Tugas searchTugas(String sifatTugas) {
-	
-}
-
-public searchMahasiswa(long nim) {
-	
-}
-
-public Kelompok searchKelompok(int l) {
-	
-}
-
-public addTugas(String tugas) {
-	
-}
-
-}
 }
