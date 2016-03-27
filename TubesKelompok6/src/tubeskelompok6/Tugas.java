@@ -7,55 +7,74 @@ package tubeskelompok6;
 
 /**
  *
- * @author Citra
+ * @author amalyacitra
  */
 public class Tugas {
-    private Kelompok[] kelompokl;
-	private String nama;
-	private int bobotNilai;
-	private String[] jawaban;
-	public int nomorsoal;
-	public int indekskelompok;
-	public String sifatTugas;
-	public String[] soal;
-	
-	public Tugas{
-		this.nama="default";
-	}
-	
-	public void setNama (String nama){
-		this.nama=nama;
-	}
-	public String getNama(){
-		return nama;
-	}
-	
-	public void setKelompok (Kelompok k){
-		
-	}
-	public Kelompok getKelompok(int i){
-		return kelompok[i];
-	}
-	
-	public void setBobot (int b){
-		this.bobotNilai=b;
-	}
-	public int getBobot(){
-		return bobotNilai;
-	}
-	
-	public void setJawaban (String j){
-		
-	}
-	public String getJawaban(int i){
-		return jawaban[i];
-	}
-	
-	public void addJawaban (String s){
-		
-	}
-	
-	public void addSoal (String s, int bobotNilai){
-		
-	}
+    private String namaTugas;
+    private int jumlahJawaban;
+    private int jumlahSoal;
+    private int maxSoal; //default = 20
+    private boolean statusDikerjakan;
+    private boolean statusAssign;
+    private boolean isTugasIndividu;
+    private String[] soal;
+    private String[] jawaban;
+
+    public Tugas(String namaTugas) {
+        this.namaTugas = namaTugas;
+        jumlahJawaban = 0;
+        jumlahSoal = 0;
+        maxSoal = 20;
+        statusDikerjakan = false;
+        statusAssign = false;
+        soal = new String[maxSoal];
+        jawaban = new String[maxSoal];
+    }
+    public String getNamaTugas() {
+        return namaTugas;
+    }
+    public void setNamaTugas(String namaTugas) {
+        this.namaTugas = namaTugas;
+    }
+    public int getMaxSoal() {
+        return maxSoal;
+    }
+    public void setMaxSoal(int maxSoal) {
+        this.maxSoal = maxSoal;
+    }
+    public boolean getStatusDikerjakan() {
+        return statusDikerjakan;
+    }
+    public void setStatusDikerjakan(boolean statusDikerjakan) {
+        this.statusDikerjakan = statusDikerjakan;
+    }
+    public boolean getStatusAssign() {
+        return statusAssign;
+    }
+    public void setStatusAssign(boolean statusAssign) {
+        this.statusAssign = statusAssign;
+    }
+    public boolean getIsTugasIndividu() {
+        return isTugasIndividu;
+    }
+    public void setIsTugasIndividu(boolean isTugasIndividu) {
+        this.isTugasIndividu = isTugasIndividu;
+    }    
+    public void addSoal(String soal){
+        if(jumlahSoal<maxSoal){
+            this.soal[++jumlahSoal] = soal;
+        }
+    }
+    public void addJawaban(String jawaban,int noSoal){
+        if(jumlahJawaban<maxSoal){
+            jumlahJawaban++;
+            this.jawaban[noSoal] = jawaban;
+        }
+    }
+    public String getSoal(int n){
+        return soal[n];
+    }
+    public String getJawaban(int n){
+        return jawaban[n];
+    }
 }
