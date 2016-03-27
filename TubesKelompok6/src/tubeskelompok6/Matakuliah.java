@@ -9,35 +9,36 @@ package tubeskelompok6;
  *
  * @author DELL
  */
-public class Matakuliah {
-
-private String nama;
-private int sks;
-private String kodeMk
-
-public void setNim(long nim) {
-	this.nim= nim;
-}
-
-public long getNim() {
-	return nim;
-}
-
-public int getNim() {
-	this.nim = nim;
-}
-
-public void setKodeMk(String k) {
-	this.k = k;
-}
-
-public String getNim() {
-	return nim;
-}
-
-public void setSks(int sks) {
-	this.sks=sks;
-}
-
-
+public class MataKuliah {
+    private String namaMK;
+    private String kodeMK;
+    private int sks;
+    
+    public MataKuliah(String kodeMK) {
+        this.kodeMK = kodeMK;
+    }
+    public MataKuliah(String namaMK, String kodeMK, int sks) {
+        this.namaMK = namaMK;
+        this.kodeMK = kodeMK;
+        this.sks = sks;
+    }
+    public String getNamaMK() {
+        return namaMK;
+    }
+    public void setNamaMK(String namaMK) {
+        this.namaMK = namaMK;
+    }
+    public String getKodeMK() {
+        return kodeMK;
+    }
+    public void setKodeMK(String kodeMK) {
+        this.kodeMK = kodeMK;
+    }
+    public int getSks() {
+        return sks;
+    }
+    public void setSks(int sks) {
+        this.sks = sks;
+    }
+    
 }
