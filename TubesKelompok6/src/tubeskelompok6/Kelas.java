@@ -7,80 +7,86 @@ package tubeskelompok6;
 
 /**
  *
- * @author Citra
+ * @author amalyacitra
  */
 public class Kelas {
-    	private String nama;
-	private Matakuliah matakuliah;
-	private Mahasiswa[] anggota;
-	private Tugas[] tugas; 
-	public int jumMahasiswa=0;
-	public int jumTugas=0;
-
-	
-	public Kelas{
-		this.nama="default";
-	}
-	
-	public void setNama (String nama){
-		this.nama=nama;
-	}
-	public String getNama(){
-		return nama;
-	}
-	
-	public void setMatakuliah (Matakuliah m){
-		matakuliah=m;
-	}
-	public Matakuliah getMatakuliah(){
-		return matakuliah;
-	}
-	
-	public void setMahasiswa (Mahasiswa m){
-		
-	}
-	public Mahasiswa getMahasiswa(int i){
-		return anggota[i];
-	}
-	
-	public void setTugas (Tugas t){
-		
-	}
-	public Tugas getTugas(int i){
-		return tugas[i];
-	}
-	
-	public void addMahasiswa (Mahasiswa m){
-		anggota[jumMahasiswa]=m;
-		jumMahasiswa++;
-	}
-	
-	public void addTugas (Tugas t){
-		Tugas[jumTugas]=t;
-		jumTugas++;
-	}
-	
-	public Mahasiswa searchMahasiswa(long nim, Mahasiswa m){
-		while (int i=0; i<anggota.length; i++){
-			if(m.getNim()==nim){
-				return m;
-			}
-		}
-	}
-	
-	public Kelompok searchKelompok(int i, Kelompok k){
-		while (int i=0; i<kelompok.length; i++){
-			if(){
-				return ;
-			}
-		}
-	}
-	
-	public Tugas searchTugas(int i){
-		while (int i=0; i<tugas.length; i++){
-			if(){
-				return t;
-			}
-		}
-	}
+    private String nama;
+    private MataKuliah mataKuliah;
+    private Mahasiswa[] mhs;
+    private Tugas[] tugas;
+    private Kelompok[] kelompok;
+    private int jumlahMhs;
+    private int maxMhs;
+    private int jumlahTugas;
+    private int maxTugas;
+    private int jumlahKelompok;
+    private int maxKelompok;
+    
+    public Kelas() {
+        nama = "default";
+        maxKelompok = 5;
+        maxMhs = 40;
+        maxTugas = 20;
+        mhs = new Mahasiswa[jumlahMhs];
+        tugas = new Tugas[jumlahTugas];
+        kelompok = new Kelompok[jumlahKelompok];
+    }
+    public Kelas(String nama) {
+        this.nama = nama;
+        maxKelompok = 5;
+        maxMhs = 40;
+        maxTugas = 20;
+        mhs = new Mahasiswa[jumlahMhs];
+        tugas = new Tugas[jumlahTugas];
+        kelompok = new Kelompok[jumlahKelompok];
+    }
+    public String getNama() {
+        return nama;
+    }
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+    public int getMaxMhs() {
+        return maxMhs;
+    }
+    public void setMaxMhs(int maxMhs) {
+        this.maxMhs = maxMhs;
+    }
+    public int getMaxKelompok() {
+        return maxKelompok;
+    }
+    public void setMaxKelompok(int maxKelompok) {
+        this.maxKelompok = maxKelompok;
+    }
+    public void addKelompok(Kelompok k){
+        if(jumlahKelompok<maxKelompok){
+            kelompok[++jumlahKelompok] = k;
+        }
+    }
+    public void addTugas(String nama){
+        if(jumlahTugas<maxTugas){
+            tugas[++jumlahTugas] = new Tugas(nama);
+        }
+    }
+    public void addMahasiswa(Mahasiswa m){
+        if(jumlahMhs<maxMhs){
+            mhs[++jumlahMhs] = m;
+        }
+    }
+    public void setMataKuliah(MataKuliah m){
+        mataKuliah = m;
+    }
+    
+    public MataKuliah getMataKuliah(){
+        return mataKuliah;
+    }
+    public Kelompok getKelompok(int n){
+        return kelompok[n];
+    }
+    public Mahasiswa getMahasiswa(int n){
+        return mhs[n];
+    }
+    public Tugas getTugas(int n){
+        return tugas[n];
+    }
 }
