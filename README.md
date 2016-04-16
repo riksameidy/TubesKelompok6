@@ -1,5 +1,6 @@
 # TubesKelompok6
 Repo Tubes Kelompok 6
+<<<<<<< HEAD
 
 
 Aplikasi e-learning adalah aplikasi pembelajaran yang memungkinkan mahasiswa dapat belajar di kelas virtual / tanpa tatap muka secara langsung. Aplikasi ini bertujuan untuk membangun sistem pembelajaran berbasis e-learning dan menjadi sarana pendukung pembelajaran yang dapat dimanfaatkan oleh perguruan tinggi.
