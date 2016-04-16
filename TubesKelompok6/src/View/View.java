@@ -3,19 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tubeskelompok6;
+package View;
 
 /**
  *
  * @author ASUS
  */
-public class TubesKelompok6 {
+public interface View {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+ 
     
 }
